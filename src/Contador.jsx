@@ -1,29 +1,36 @@
-import { useState } from "react"
+import { useState } from "react";
+import "./index.css";
 
-const Cronometro = () =>{
+const Contador = () =>{
 
     const [counter,setCounter] = useState(0);
 
     const add = () =>{
-        setCounter(counter + 1);
+        setCounter(counter + Number(number));
     }
     
     const sub = () =>{
-        setCounter(counter - 1);
+        setCounter(counter - Number(number));
+    }
+
+    const [number, setNumber] = useState(1);
+
+    const handleNumberChange = (number) => {
+        setNumber(number.target.value);
     }
 
     return (
-        <>
-            <div>
-            <button onClick={add}>Sumar</button>
-            <button onClick={sub}>Restar</button>
+        <div className="container">
+            <h2 className="saltos">Intervalos del Contador : </h2>
+            <input className = "number" type="number" defaultValue="1" onChange={handleNumberChange}/>
+            <div className= "botones">
+                <button className="b1" onClick={sub}>Restar</button>
+                <button className="b2" onClick={add}>Sumar</button>
             </div>
-            <h2>Saltos del Contador : </h2>
-            <input id = "number" type="number" defaultValue="0"/>
-            <h1>Contador : #{counter}</h1>
-        </>
+            <h1 className="contador">Contador : {counter}</h1>
+        </div>
     )
 
 }
 
-export default Cronometro;
+export default Contador;
