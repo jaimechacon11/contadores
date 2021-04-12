@@ -1,3 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:url("https://i.pinimg.com/originals/76/cd/28/76cd28d599873f6244ac933c08b34660.jpg");
+    height: 100vh;
+    margin: 0rem;
+    padding: 2rem;
+    background-size: 80rem 40rem;
+}
+
+#root{
+    background: url("https://images6.alphacoders.com/557/thumb-1920-557422.jpg");
+    height: 90vh;
+    margin: 0rem;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: 80rem 40rem;
+    border-radius: 3rem;
+    border: 0.5rem solid black;
+}
+
 .container{
     background: rgb(127,199,175);
     display: block;
@@ -9,6 +34,7 @@
 
 .container .saltos{
     background-color: rgb(255,150,154);
+    margin: 0rem;
 }
 
 .container .number{
@@ -22,6 +48,13 @@
 .container .botones .b1{
     border-radius: 0.3rem;
     background: crimson;
+    color: white;
+}
+
+.container .botones .br{
+    margin-left: 2rem;
+    border-radius: 0.3rem;
+    background: rgb(248,202,0);
     color: white;
 }
 

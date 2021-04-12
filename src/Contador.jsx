@@ -12,6 +12,10 @@ const Contador = () =>{
     const sub = () =>{
         setCounter(counter - Number(number));
     }
+    
+    const reiniciar = () =>{
+        setCounter(0);
+    }
 
     const [number, setNumber] = useState(1);
 
@@ -25,6 +29,7 @@ const Contador = () =>{
             <input className = "number" type="number" defaultValue="1" onChange={handleNumberChange}/>
             <div className= "botones">
                 <button className="b1" onClick={sub}>Restar</button>
+                <button className="br" onClick={reiniciar}>Reiniciar</button>
                 <button className="b2" onClick={add}>Sumar</button>
             </div>
             <h1 className="contador">Contador : {counter}</h1>
